@@ -1,5 +1,9 @@
 # main.py
 import sys
+import asyncio
+from twisted.internet import asyncioreactor  # Import the correct reactor
+asyncioreactor.install()  # Install AsyncioSelectorReactor
+
 from scraper import EmployeeSpider
 from scrapy.crawler import CrawlerProcess
 

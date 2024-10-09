@@ -1,3 +1,4 @@
+flask
 scrapy
 beautifulsoup4
 openai
@@ -6,3 +7,4 @@ selenium
 chromedriver-autoinstaller
 scrapy-selenium
 webdriver-manager
+dotenv

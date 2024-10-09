@@ -6,8 +6,13 @@ import json
 import random
 import traceback
 
-# Set your OpenAI API key
-openai.api_key = os.getenv('OPENAI_API_KEY', '')
+# Load the OpenAI API key from environment variables
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    raise ValueError("API Key not found. Please set OPENAI_API_KEY in environment variables.")
+
+# Set the OpenAI API key
+openai.api_key = openai_api_key
 
 def extract_data(cleaned_text):
     prompt = f"""
